@@ -97,13 +97,9 @@ video {
 }
 
 #info-1-img-1 {
-<<<<<<< Updated upstream
-  background: #333333 no-repeat center/cover url("david-travis-aVvZJC0ynBQ-unsplash.jpg");
-=======
   background: #333333 no-repeat center/cover url("assets/heart-1.jpg");
->>>>>>> Stashed changes
 }
-/*
+
 #info-1-img-2 {
   background: #333333 no-repeat center/cover url("assets/heart-2.jpg");
 }
@@ -127,7 +123,6 @@ video {
 #info-2-img-2 {
   background: #333333 no-repeat center/cover url("assets/people-1.jpg");
 }
-*/
 
 #callout-info {
   border-left: #333888 solid 5px;
