@@ -36,7 +36,7 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  background: #333333 no-repeat center/cover url("ion-fet-QRawWgV6gmo-unsplash.jpg");
+  background: #333333 no-repeat center/cover url("assets/hero-image.jpg");
 }
 
 #hero-container > h2 {
@@ -48,6 +48,38 @@ video {
   width: 10%;
   margin: 2px 0px 10px 0px;
   background-color: white;
+}
+
+#prediction-text {
+  margin-top: 10px;
+  align-self: center;
+}
+
+#prediction-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.prediction {
+  flex-basis: calc(25% - 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: rgba(183, 183, 183, 0.5);
+  backdrop-filter: blur(1px);
+}
+
+.prediction-item {
+  flex-basis: 25%; /* 25% for 4 items in a row, 10px for the gap between the items */
+  height: 40px; /* or any height you want */
+  background-color: white;
+  margin-top: 5px; /* gap between the rows */
+  margin-bottom: 5px; /* gap between the rows */
 }
 
 .content {
@@ -65,33 +97,32 @@ video {
 }
 
 #info-1-img-1 {
-  background: #333333 no-repeat center/cover url("david-travis-aVvZJC0ynBQ-unsplash.jpg");
+  background: #333333 no-repeat center/cover url("assets/heart-1.jpg");
 }
-/*
+
 #info-1-img-2 {
-  background: #333333 no-repeat center/cover url("assets/animal-2.jpeg");
+  background: #333333 no-repeat center/cover url("assets/heart-2.jpg");
 }
 
 #info-1-img-3 {
-  background: #333333 no-repeat center/cover url("assets/animal-3.jpeg");
+  background: #333333 no-repeat center/cover url("assets/heart-3.jpg");
 }
 
 #info-1-img-4 {
-  background: #333333 no-repeat center/cover url("assets/animal-4.jpeg");
+  background: #333333 no-repeat center/cover url("assets/heart-4.jpg");
 }
 
 #info-1-img-5 {
-  background: #333333 no-repeat center/cover url("assets/animal-5.jpeg");
+  background: #333333 no-repeat center/cover url("assets/heart-5.jpg");
 }
 
 #info-2-img-1 {
-  background: #333333 no-repeat center/cover url("assets/people-1.jpeg");
+  background: #333333 no-repeat center/cover url("assets/people-2.jpg");
 }
 
 #info-2-img-2 {
-  background: #333333 no-repeat center/cover url("assets/people-2.jpeg");
+  background: #333333 no-repeat center/cover url("assets/people-1.jpg");
 }
-*/
 
 #callout-info {
   border-left: #333888 solid 5px;
@@ -109,7 +140,7 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #333333 no-repeat center/cover url("assets/call-to-action-1.jpeg");
+  background: #333333 no-repeat center/cover url("assets/call-to-action.jpg");
 }
 
 #call-to-action > div {
@@ -163,7 +194,7 @@ video {
 
 @media screen and (min-width: 768px) {
   #hero-container {
-    height: 500px;
+    height: 600px;
   }
 
   #hero-container > h2 {
@@ -304,7 +335,7 @@ video {
 
 @media screen and (min-width: 1200px) {
   #hero-container {
-    height: 550px;
+    height: 700px;
   }
 
   #hero-container > h2 {
