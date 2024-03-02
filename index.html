@@ -46,7 +46,7 @@
       </p>
       <!-- <button class="btn btn-warning rounded-pill px-5 py-2 my-4"><b>Start Tutorial</b></button> -->
       <h4 id="prediction-text" class="my-3">Enter your parameters</h4>
-      <form id="prediction-form" class="form">
+      <!-- <form id="prediction-form" class="form">
         <div class="prediction">
           <p>a</p>
           <input
@@ -127,8 +127,133 @@
             required
           />
         </div>
-      </form>
-      <button style="align-self: center;" class="btn btn-warning px-4 py-2 my-4 rounded-pill"><big>Predict the Probability</big></button>
+      </form> -->
+      <form action='/predict' method="post" class="col s12">
+        <div class="row">
+          <div class="input-field col s4">
+              <label for="a1"><b>Age</b></label>
+              <br>
+            <input name="Age" id="a1" type="number" class="validate">
+          </div>
+          <div class="input-field col s4">
+  
+            <label for="a2"><b>Sex</b></label>
+              <br>
+            <select id="a2" name="Sex" placeholder="Male or Female"  type="numbers" class="validate" style="width: 170px">
+              <option value=""></option>
+              <option value="0">Female</option>
+              <option value="1">Male</option>
+            </select>
+
+  
+          </div>
+  
+          <div class="input-field col s4">
+              <label for="a3"><b>Chest Pain type</b></label>
+              <br>
+            <select id="a3" name="Chest Pain type" type="number" class="validate" style="width: 170px">
+              <option value=""></option>
+              <option value="0">Asymptomatic              </option>
+              <option value="1">Atypical Angina           </option>
+              <option value="2">Non-anginal pain          </option>
+              <option value="3">Typical angina            </option>
+            </select>
+            
+          </div>
+
+          <div class="input-field col s4">
+            <label for="a4"><b>Resting BP(mm Hg)</b></label>
+            <br>
+          <input id="a4" name="Humidity" type="number" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+          <label for="a5"><b>Cholesterol(mg/dl)</b></label>
+          <br>
+        <input id="a5" name="Cholesterol" type="number" class="validate">
+
+      </div>
+      <div class="input-field col s4">
+        <label for="a6"><b>Fasting blood sugar</b></label>
+        <br>
+      <select id="a6" name="Fasting blood sugar" type="text" class="validate" style="width: 170px">
+        <option value=""></option>
+        <option value="0">Less than 120mg/dl</option>
+        <option value="1">More than 120mg/dl</option>
+      </select>  
+
+    </div>
+    <div class="input-field col s4">
+      <label for="a7"><b>Resting ECG results</b></label>
+      <br>
+    <select id="a7" name="Resting ECG results" type="number" class="validate" style="width: 170px">
+      <option value=""></option>
+      <option value="0">Left ventricular hpertrophy by Estes's criteria</option>
+      <option value="1">Normal</option>
+      <option value="2">ST-T wave abnormality</option>
+    </select>
+
+  </div>
+  <div class="input-field col s4">
+    <label for="a8"><b>Max heart rate(BPM)</b></label>
+    <br>
+  <input id="a8" name="Maximum heart rate" type="number" class="validate">
+
+</div>
+<div class="input-field col s4">
+  <label for="a9"><b>Exercise angina</b></label>
+  <br>
+<select id="a9" name="Exercise angina" type="text" class="validate" style="width: 170px">
+  <option value=""></option>
+  <option value="0">NO</option>
+  <option value="1">YES</option>
+</select>
+
+</div>
+<div class="input-field col s4">
+  <label for="a10"><b>Oldpeak</b></label>
+  <br>
+<input id="a10" name="Oldpeak" type="text" class="validate" >
+
+</div>
+<div class="input-field col s4">
+  <label for="a11"><b>Slope of ST segment</b></label>
+  <br>
+<select id="a11" name="Slope of ST segment" type="text" class="validate" style="width: 170px">
+  <option value=""></option>
+  <option value="0">Downsloping</option>
+  <option value="1">Flat</option>
+  <option value="2">Upsloping</option>
+</select>
+
+</div>
+<div class="input-field col s4">
+  <label for="a12"><b>No. of major vessels</b></label>
+  <br>
+<select id="a12" name="No. of major vessels" type="text" class="validate" style="width: 170px">
+  <option value=""></option>
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+
+</div>
+<div class="input-field col s4">
+  <label for="a13"><b>Thalassemia disorder</b></label>
+  <br>
+<select id="a13" name="Thalassemia disorder" type="text" class="validate" style="width: 170px">
+  <option value=""></option>
+  <option value="0">NULL</option>
+  <option value="1">Fixed defect</option>
+  <option value="2">Normal blood flow</option>
+  <option value="3">Reversible defect</option>
+</select>
+
+</div> 
+  
+        </div>  
+      <button style="align-self: center;" class="btn btn-warning px-4 py-2 my-4 rounded-pill"><big>Predict Probability</big></button>
       <p style="align-self: center;"><b>The probability of getting a heart disease: 0.52</b></p>
     </div>
 
