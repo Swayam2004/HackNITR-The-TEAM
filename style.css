@@ -36,7 +36,7 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  background: #333333 no-repeat center/cover url("hero-image.jpeg");
+  background: #333333 no-repeat center/cover url("ion-fet-QRawWgV6gmo-unsplash.jpg");
 }
 
 #hero-container > h2 {
@@ -65,7 +65,7 @@ video {
 }
 
 #info-1-img-1 {
-  background: #333333 no-repeat center/cover url("animal-1.jpeg");
+  background: #333333 no-repeat center/cover url("Snellen_chart.svg");
 }
 
 #info-1-img-2 {
