@@ -36,7 +36,7 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  background: #333333 no-repeat center/cover url("hero-image.jpeg");
+  background: #333333 no-repeat center/cover url("assets/hero-image.jpeg");
 }
 
 #hero-container > h2 {
@@ -65,31 +65,31 @@ video {
 }
 
 #info-1-img-1 {
-  background: #333333 no-repeat center/cover url("animal-1.jpeg");
+  background: #333333 no-repeat center/cover url("assets/animal-1.jpeg");
 }
 
 #info-1-img-2 {
-  background: #333333 no-repeat center/cover url("animal-2.jpeg");
+  background: #333333 no-repeat center/cover url("assets/animal-2.jpeg");
 }
 
 #info-1-img-3 {
-  background: #333333 no-repeat center/cover url("animal-3.jpeg");
+  background: #333333 no-repeat center/cover url("assets/animal-3.jpeg");
 }
 
 #info-1-img-4 {
-  background: #333333 no-repeat center/cover url("animal-4.jpeg");
+  background: #333333 no-repeat center/cover url("assets/animal-4.jpeg");
 }
 
 #info-1-img-5 {
-  background: #333333 no-repeat center/cover url("animal-5.jpeg");
+  background: #333333 no-repeat center/cover url("assets/animal-5.jpeg");
 }
 
 #info-2-img-1 {
-  background: #333333 no-repeat center/cover url("people-1.jpeg");
+  background: #333333 no-repeat center/cover url("assets/people-1.jpeg");
 }
 
 #info-2-img-2 {
-  background: #333333 no-repeat center/cover url("people-2.jpeg");
+  background: #333333 no-repeat center/cover url("assets/people-2.jpeg");
 }
 
 #callout-info {
@@ -108,7 +108,7 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #333333 no-repeat center/cover url("call-to-action-1.jpeg");
+  background: #333333 no-repeat center/cover url("assets/call-to-action-1.jpeg");
 }
 
 #call-to-action > div {
