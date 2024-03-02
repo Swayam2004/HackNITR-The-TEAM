@@ -65,9 +65,9 @@ video {
 }
 
 #info-1-img-1 {
-  background: #333333 no-repeat center/cover url("Snellen_chart.svg");
+  background: #333333 no-repeat center/cover url("david-travis-aVvZJC0ynBQ-unsplash.jpg");
 }
-
+/*
 #info-1-img-2 {
   background: #333333 no-repeat center/cover url("animal-2.jpeg");
 }
@@ -91,6 +91,7 @@ video {
 #info-2-img-2 {
   background: #333333 no-repeat center/cover url("people-2.jpeg");
 }
+*/
 
 #callout-info {
   border-left: #333888 solid 5px;
@@ -168,13 +169,19 @@ video {
   #hero-container > h2 {
     font-size: 45px;
   }
-
+  /*
   #info-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0.5rem;
   }
+  */
 
+  #info-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /*
   #info-1-header {
     grid-row: 1/2;
     grid-column: 1/4;
@@ -196,7 +203,7 @@ video {
     grid-row: 4/5;
     grid-column: 1/4;
   }
-
+  */
   #call-to-action {
     height: 600px;
   }
