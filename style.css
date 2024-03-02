@@ -65,9 +65,9 @@ video {
 }
 
 #info-1-img-1 {
-  background: #333333 no-repeat center/cover url("david-travis-aVvZJC0ynBQ-unsplash.jpg");
+  background: #333333 no-repeat center/cover url("assets/david-travis-aVvZJC0ynBQ-unsplash.jpg");
 }
-/*
+
 #info-1-img-2 {
   background: #333333 no-repeat center/cover url("assets/animal-2.jpeg");
 }
@@ -91,7 +91,7 @@ video {
 #info-2-img-2 {
   background: #333333 no-repeat center/cover url("assets/people-2.jpeg");
 }
-*/
+
 
 #callout-info {
   border-left: #333888 solid 5px;
