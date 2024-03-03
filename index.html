@@ -1,469 +1,839 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Title -->
+        <title>Studying Health Reports made easier</title>
+		
+		<!-- Favicon -->
+        <link rel="icon" href="img/heart_logo.png">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Online Heart Test</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="css/nice-select.css">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="css/icofont.css">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="css/slicknav.min.css">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="css/owl-carousel.css">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" href="css/datepicker.css">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="css/animate.min.css">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
+		
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+		
+    </head>
+    <body>
+	
+		<!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
 
-<body>
-  <div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3">
-      <img class="bi me-2" width="50" height="40" src="assets/logos/heart_logo.png" alt="heart">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <span class="fs-4">Website Name</span>
-      </a>
-
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">Home</a>
-        </li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-        <li class="nav-item">
-          <a href="sign-in.html" class="nav-link">Sign In</a>
-        </li>
-      </ul>
-    </header>
-  </div>
-
-  <div id="hero-container">
-    <h2><strong>Website Name</strong></h2>
-    <div></div>
-    <p><big>Empower yourself with knowledge</big></p>
-    <p>
-      <big>Discover your personalized risk of heart disease with our advanced
-        calculation tool.</big>
-    </p>
-    <!-- <button class="btn btn-warning rounded-pill px-5 py-2 my-4"><b>Start Tutorial</b></button> -->
-    <h4 id="prediction-text" class="my-3">Enter your parameters</h4>
-    <!-- <form id="prediction-form" class="form">
-        <div class="prediction">
-          <p>a</p>
-          <input
-            type="text"
-            id="a"
-            placeholder="Enter a"
-            class="prediction-item"
-            required
-          />
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
         </div>
-        <div class="prediction">
-          <p>b</p>
-          <input
-            type="text"
-            id="b"
-            placeholder="Enter b"
-            class="prediction-item"
-            required
-          />
-        </div>
-        <div class="prediction">
-          <p>c</p>
-          <input
-            type="text"
-            id="c"
-            placeholder="Enter c"
-            class="prediction-item"
-            required
-          />
-        </div>
-        <div class="prediction">
-          <p>d</p>
-          <input
-            type="text"
-            id="d"
-            placeholder="Enter d"
-            class="prediction-item"
-            required
-          />
-        </div>
-        <div class="prediction">
-          <p>e</p>
-          <input
-            type="text"
-            id="e"
-            placeholder="Enter e"
-            class="prediction-item"
-            required
-          />
-        </div>
-        <div class="prediction">
-          <p>f</p>
-          <input
-            type="text"
-            id="f"
-            placeholder="Enter f"
-            class="prediction-item"
-            required
-          />
-        </div>
-        <div class="prediction">
-          <p>g</p>
-          <input
-            type="text"
-            id="g"
-            placeholder="Enter g"
-            class="prediction-item"
-            required
-          />
-        </div>
-        <div class="prediction">
-          <p>h</p>
-          <input
-            type="text"
-            id="h"
-            placeholder="Enter h"
-            class="prediction-item"
-            required
-          />
-        </div>
-      </form> -->
-    <form action='http://localhost:5000/predict' method="post" class="col s12">
-      <div class="row">
-        <div class="input-field col s4">
-          <label for="a1"><b>Age</b></label>
-          <br>
-          <input name="Age" id="a1" type="number" class="validate">
-        </div>
-        <div class="input-field col s4">
+        <!-- End Preloader -->
+		
+		<!-- Header Area -->
+		<header class="header" >
+			<!-- Topbar -->
+			<div class="topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-5 col-12">
+							<!-- Contact -->
+							<ul class="top-link">
+								<li><a href="#">About</a></li>
+								<li><a href="#">Patients</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+							<!-- End Contact -->
+						</div>
+						<div class="col-lg-6 col-md-7 col-12">
+							<!-- Top Contact -->
+							<ul class="top-contact">
+								<li><i class="fa fa-phone"></i>+880 1234 56789</li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
+							</ul>
+							<!-- End Top Contact -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Topbar -->
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="index.html"><img height="45" width="45" src="img/heart_logo.png" alt="#"></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="index.html">Home Page 1</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Patients </a></li>
+											<li><a href="#">Services </a></li>
+											<li><a href="#">Pages <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="404.html">404 Error</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="blog-single.html">Blog Details</a></li>
+												</ul>
+											</li>
+											<li><a href="contact.html">Contact Us</a></li>
+										</ul>
+									</nav>
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!-- End Header Area -->
+		
+		<!-- Slider Area -->
+		<section class="slider">
+			<div class="hero-slider">
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/slider2.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>Studying <span>Health Reports </span> made easier to <span>Understand!</span></h1>
+									<p> </p>
+									<div class="button">
+										<a href="#" class="btn">Start Test</a>
+										<a href="#" class="btn primary">Learn More</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single Slider -->
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/slider.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>Studying <span>Health Reports </span> made easier to <span>Understand!</span></h1>
+									<p></p>
+									<div class="button">
+										<a href="#" class="btn">Start Test</a>
+										<a href="#" class="btn primary">About Us</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Start End Slider -->
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/slider3.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>Studying <span>Health Reports </span> made easier to <span>Understand!</span></h1>
+									<p> </p>
+									<div class="button">
+										<a href="#" class="btn">Start Test</a>
+										<a href="#" class="btn primary">Conatct Now</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single Slider -->
+			</div>
+		</section>
+		<!--/ End Slider Area -->
+		
+		<!-- Start Schedule Area -->
+		<section class="schedule">
+			<div class="container">
+				<div class="schedule-inner">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-12 ">
+							<!-- single-schedule -->
+							<div class="single-schedule first">
+								<div class="inner">
+									<div class="icon">
+										<i class="fa fa-ambulance"></i>
+									</div>
+									<div class="single-content">
+										<span>Lorem Amet</span>
+										<h4>Emergency Cases</h4>
+										<p></p>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule middle">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-prescription"></i>
+									</div>
+									<div class="single-content">
+										<span>Fusce Porttitor</span>
+										<h4>Doctors Timetable</h4>
+										<p></p>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule last">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-ui-clock"></i>
+									</div>
+									<div class="single-content">
+										<span>Donec luctus</span>
+										<h4>Opening Hours</h4>
+										<ul class="time-sidual">
+											
+										</ul>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/End Start schedule Area -->
 
-          <label for="a2"><b>Sex</b></label>
-          <br>
-          <select id="a2" name="Sex" placeholder="Male or Female" type="numbers" class="validate" style="width: 170px">
-            <option value=""></option>
-            <option value="0">Female</option>
-            <option value="1">Male</option>
-          </select>
-
-
-        </div>
-
-        <div class="input-field col s4">
-          <label for="a3"><b>Chest Pain type</b></label>
-          <br>
-          <select id="a3" name="Chest Pain type" type="number" class="validate" style="width: 170px">
-            <option value=""></option>
-            <option value="0">Asymptomatic </option>
-            <option value="1">Atypical Angina </option>
-            <option value="2">Non-anginal pain </option>
-            <option value="3">Typical angina </option>
-          </select>
-
-        </div>
-
-        <div class="input-field col s4">
-          <label for="a4"><b>Resting BP(mm Hg)</b></label>
-          <br>
-          <input id="a4" name="Humidity" type="number" class="validate">
-
-        </div>
-        <div class="input-field col s4">
-          <label for="a5"><b>Cholesterol(mg/dl)</b></label>
-          <br>
-          <input id="a5" name="Cholesterol" type="number" class="validate">
-    
-  </div>
-  <div class="input-field col s4">
-    <label for="a6"><b>Fasting blood sugar</b></label>
-    <br>
-    <select id="a6" name="Fasting blood sugar" type="text" class="validate" style="width: 170px">
-      <option value=""></option>
-      <option value="0">Less than 120mg/dl</option>
-      <option value="1">More than 120mg/dl</option>
-    </select>
-
-  </div>
-  <div class="input-field col s4">
-    <label for="a7"><b>Resting ECG results</b></label>
-    <br>
-    <select id="a7" name="Resting ECG results" type="number" class="validate" style="width: 170px">
-      <option value=""></option>
-      <option value="0">Left ventricular hpertrophy by Estes's criteria</option>
-      <option value="1">Normal</option>
-      <option value="2">ST-T wave abnormality</option>
-    </select>
-
-  </div>
-  <div class="input-field col s4">
-    <label for="a8"><b>Max heart rate(BPM)</b></label>
-    <br>
-    <input id="a8" name="Maximum heart rate" type="number" class="validate">
-
-  </div>
-  <div class="input-field col s4">
-    <label for="a9"><b>Exercise angina</b></label>
-    <br>
-    <select id="a9" name="Exercise angina" type="text" class="validate" style="width: 170px">
-      <option value=""></option>
-      <option value="0">NO</option>
-      <option value="1">YES</option>
-    </select>
-
-  </div>
-  <div class="input-field col s4">
-    <label for="a10"><b>Oldpeak</b></label>
-    <br>
-    <input id="a10" name="Oldpeak" type="text" class="validate">
-
-  </div>
-  <div class="input-field col s4">
-    <label for="a11"><b>Slope of ST segment</b></label>
-    <br>
-    <select id="a11" name="Slope of ST segment" type="text" class="validate" style="width: 170px">
-      <option value=""></option>
-      <option value="0">Downsloping</option>
-      <option value="1">Flat</option>
-      <option value="2">Upsloping</option>
-    </select>
-
-  </div>
-  <div class="input-field col s4">
-    <label for="a12"><b>No. of major vessels</b></label>
-    <br>
-    <select id="a12" name="No. of major vessels" type="text" class="validate" style="width: 170px">
-      <option value=""></option>
-      <option value="0">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-    </select>
-
-  </div>
-  <div class="input-field col s4">
-    <label for="a13"><b>Thalassemia disorder</b></label>
-    <br>
-    <select id="a13" name="Thalassemia disorder" type="text" class="validate" style="width: 170px">
-      <option value=""></option>
-      <option value="0">NULL</option>
-      <option value="1">Fixed defect</option>
-      <option value="2">Normal blood flow</option>
-      <option value="3">Reversible defect</option>
-    </select>
-
-  </div>
-
-  </div>
-  <button style="align-self: center;" class="btn btn-warning px-4 py-2 my-4 rounded-pill" type="submit"><big>Predict
-      Probability</big></button>
-  <p style="align-self: center;"><b>The probability of getting a heart disease: 0.52</b></p>
-  </div>
-  <br>
-  {{pred}}<br>
-
-  <div class="content" id="info-1">
-    <h2 id="info-1-header">Vision plays a central role in how we acquire knowledge about the world.</h2>
-    <p id="info-1-content">Vision is the primary sense through which humans perceive and interact with their
-      environment.</p>
-    <div class="content-image" id="info-1-img-1"></div>
-    <div class="content-image" id="info-1-img-2"></div>
-    <div class="content-image" id="info-1-img-3"></div>
-    <div class="content-image" id="info-1-img-4"></div>
-    <div class="content-image" id="info-1-img-5"></div>
-  </div>
-
-  <div class="container">
-    <div id="callout-info">
-      <h1>Empower Your Heart</h1>
-      <p>
-        Your health is your most valuable asset, the cornerstone of a
-        fulfilling life. It's the sum of your choices, the foundation upon
-        which your dreams are built. By prioritizing your well-being today,
-        you're not just investing in a longer life - you're ensuring a life
-        lived to its fullest potential, rich with vitality and purpose
-      </p>
-    </div>
-  </div>
-
-  <div class="content" id="info-2">
-    <h2 id="info-2-header">Take Action</h2>
-    <p id="info-2-content-1">
-      Armed with knowledge about your heart health, it's time to take
-      proactive steps towards a healthier lifestyle. Explore actionable tips
-      and strategies for improving your cardiovascular health, from adopting a
-      heart-healthy diet and incorporating regular exercise into your routine
-      to managing stress and quitting smoking. Small changes can make a big
-      difference when it comes to your heart. Armed with knowledge about your
-      heart health, it's time to take proactive steps towards a healthier
-      lifestyle. Explore actionable tips and strategies for improving your
-      cardiovascular health, from adopting a heart-healthy diet and
-      incorporating regular exercise into your routine to managing stress and
-      quitting smoking. Small changes can make a big difference when it comes
-      to your heart
-    </p>
-    <div class="content-image" id="info-2-img-1"></div>
-    <div class="content-image" id="info-2-img-2"></div>
-    <p class="text-body-secondary" id="info-2-content-2">
-      <i><small>Stay up-to-date with the latest news and developments in the field
-          of heart health. Our blog features informative articles, expert
-          interviews, and tips for maintaining a healthy heart. Whether you're
-          looking for healthy recipe ideas, exercise inspiration, or guidance
-          on managing chronic conditions, our resources are here to support
-          you on your journey to optimal heart health</small></i>
-    </p>
-  </div>
-
-  <div id="call-to-action">
-    <div>
-      <h2>Daily Heart Tests</h2>
-      <p class="mx-5">Take charge of your heart health journey today.</p>
-      <!-- <button class="btn btn-warning rounded-pill px-4 my-4">
-          <b>Start Tutorial</b>
-        </button> -->
-    </div>
-  </div>
-
-  <!-- <div class="container">
-      <footer
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"
-      >
-        <div class="col mb-3 mr-3">
-          <h5>Join Zairza Family</h5>
-          <p class="text-body-secondary">
-            <small>Get exclusive Workshops, sessions, etc</small>
-          </p>
-          <a
-            href="/"
-            class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
-          ></a>
-
-          <button class="btn btn-dark rounded-pill">Join us</button>
-          <p class="text-body-secondary">© 2023</p>
-        </div>
-
-        <div class="col mb-3">
-          <h5>Zairza</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2 mt-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">Log in</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary"
-                >Join the Zairza Family</a
-              >
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary"
-                >Member offers</a
-              >
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary"
-                >Workshops & Events</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="col mb-3">
-          <h5>Services</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2 mt-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">C++</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">Java</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary"
-                >Javascript</a
-              >
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">PHP</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">Python</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">Android</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">UI Design</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col mb-3">
-          <h5>Help</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2 mt-2">
-              <a href="#" class="nav-link p-0 text-body-secondary"
-                >How to join</a
-              >
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">Mentors</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary"
-                >Contact us</a
-              >
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">Core Team</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">Feedback</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col mb-3">
-          <h5>About Zairza</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2 mt-2">
-              <a href="#" class="nav-link p-0 text-body-secondary"
-                >This is Zairza</a
-              >
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary"
-                >Working at Zairza</a
-              >
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary">Newsroom</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-body-secondary"
-                >Productivity</a
-              >
-            </li>
-          </ul>
-        </div>
-      </footer>
-    </div>  -->
-
-  <div class="container">
-    <footer class="d-flex justify-content-between align-items-center py-3 my-2">
-      <p class="col-md-4 mb-0 text-body-secondary">© 2023 HackNITR</p>
-
-      <ul class="nav col-md-8 justify-content-end" id="footer-links">
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">Terms & Conditions</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">Settings</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">Privacy Policy</a>
-        </li>
-      </ul>
-    </footer>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-</body>
-
+		<!-- Start Feautes -->
+		<section class="Feautes section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Are Always Ready to Help You Doctors </h2>
+							<img src="img/section-img.png" alt="#">
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="icofont icofont-ambulance-cross"></i>
+							</div>
+							<h3>Run the test</h3>
+							<p></p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="icofont icofont-medical-sign-alt"></i>
+							</div>
+							<h3>Feed the data to our model</h3>
+							<p></p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features last">
+							<div class="signle-icon">
+								<i class="icofont icofont-stethoscope"></i>
+							</div>
+							<h3>Medical Treatment needed or not</h3>
+							<p></p>
+						</div>
+						<!-- End Single features -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Feautes -->
+		
+		<!-- Start Fun-facts -->
+		<div id="fun-facts" class="fun-facts section overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-home"></i>
+							<div class="content">
+								<span class="counter">3468</span>
+								<p>Hospital Rooms</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-user-alt-3"></i>
+							<div class="content">
+								<span class="counter">557</span>
+								<p>Specialist Doctors</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont-simple-smile"></i>
+							<div class="content">
+								<span class="counter">4379</span>
+								<p>Happy Patients</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-table"></i>
+							<div class="content">
+								<span class="counter">32</span>
+								<p>Years of Experience</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Fun-facts -->
+		
+		<!-- Start Why choose -->
+		<section class="why-choose section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Enter your test results </h2>
+							<img src="img/section-img.png" alt="#">
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-12">
+		<!--Butttons and input area -->		
+		<form action='/predict' method="post" class="col s12">
+			<div class="row">
+			  <div class="input-field col s4">
+				  <label for="a1"><b>Age</b></label>
+				  <br>
+				<input name="Age" id="a1" type="number" class="validate">
+			  </div>
+			  <div class="input-field col s4">
+	  
+				<label for="a2"><b>Sex</b></label>
+				  <br>
+				<select id="a2" name="Sex" placeholder="Male or Female"  type="numbers" class="validate" style="width: 170px">
+				  <option value=""></option>
+				  <option value="0">Female</option>
+				  <option value="1">Male</option>
+				</select>
+	
+	  
+			  </div>
+	  
+			  <div class="input-field col s4">
+				  <label for="a3"><b>Chest Pain type</b></label>
+				  <br>
+				<select id="a3" name="Chest Pain type" type="number" class="validate" style="width: 170px">
+				  <option value=""></option>
+				  <option value="0">Asymptomatic              </option>
+				  <option value="1">Atypical Angina           </option>
+				  <option value="2">Non-anginal pain          </option>
+				  <option value="3">Typical angina            </option>
+				</select>
+				
+			  </div>
+	
+			  <div class="input-field col s4">
+				<label for="a4"><b>Resting BP(mm Hg)</b></label>
+				<br>
+			  <input id="a4" name="Humidity" type="number" class="validate">
+	
+			</div>
+			<div class="input-field col s4">
+			  <label for="a5"><b>Cholesterol(mg/dl)</b></label>
+			  <br>
+			<input id="a5" name="Cholesterol" type="number" class="validate">
+	
+		  </div>
+		  <div class="input-field col s4">
+			<label for="a6"><b>Fasting blood sugar</b></label>
+			<br>
+		  <select id="a6" name="Fasting blood sugar" type="text" class="validate" style="width: 170px">
+			<option value=""></option>
+			<option value="0">Less than 120mg/dl</option>
+			<option value="1">More than 120mg/dl</option>
+		  </select>  
+	
+		</div>
+		<div class="input-field col s4">
+		  <label for="a7"><b>Resting ECG results</b></label>
+		  <br>
+		<select id="a7" name="Resting ECG results" type="number" class="validate" style="width: 170px">
+		  <option value=""></option>
+		  <option value="0">Left ventricular hpertrophy by Estes's criteria</option>
+		  <option value="1">Normal</option>
+		  <option value="2">ST-T wave abnormality</option>
+		</select>
+	
+	  </div>
+	  <div class="input-field col s4">
+		<label for="a8"><b>Max heart rate(BPM)</b></label>
+		<br>
+	  <input id="a8" name="Maximum heart rate" type="number" class="validate">
+	
+	</div>
+	<div class="input-field col s4">
+	  <label for="a9"><b>Exercise angina</b></label>
+	  <br>
+	<select id="a9" name="Exercise angina" type="text" class="validate" style="width: 170px">
+	  <option value=""></option>
+	  <option value="0">NO</option>
+	  <option value="1">YES</option>
+	</select>
+	
+	</div>
+	<div class="input-field col s4">
+	  <label for="a10"><b>Oldpeak</b></label>
+	  <br>
+	<input id="a10" name="Oldpeak" type="text" class="validate" >
+	
+	</div>
+	<div class="input-field col s4">
+	  <label for="a11"><b>Slope of ST segment</b></label>
+	  <br>
+	<select id="a11" name="Slope of ST segment" type="text" class="validate" style="width: 170px">
+	  <option value=""></option>
+	  <option value="0">Downsloping</option>
+	  <option value="1">Flat</option>
+	  <option value="2">Upsloping</option>
+	</select>
+	
+	</div>
+	<div class="input-field col s4">
+	  <label for="a12"><b>No. of major vessels</b></label>
+	  <br>
+	<select id="a12" name="No. of major vessels" type="text" class="validate" style="width: 170px">
+	  <option value=""></option>
+	  <option value="0">0</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	</select>
+	
+	</div>
+	<div class="input-field col s4">
+	  <label for="a13"><b>Thalassemia disorder</b></label>
+	  <br>
+	<select id="a13" name="Thalassemia disorder" type="text" class="validate" style="width: 170px">
+	  <option value=""></option>
+	  <option value="0">NULL</option>
+	  <option value="1">Fixed defect</option>
+	  <option value="2">Normal blood flow</option>
+	  <option value="3">Reversible defect</option>
+	</select>
+	
+	</div> 
+	  
+			</div>  
+		  <button style="align-self: center;" class="btn btn-warning px-4 py-2 my-4 rounded-pill"><big>Predict Probability</big></button>
+		  <!--<p style="align-self: center;"><b>The probability of getting a heart disease: 0.52</b></p> -->
+		</div>		
+				
+		<!-- Start Blog Area -->
+		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Keep up with Our Most Recent Medical News.</h2>
+							<img src="img/section-img.png" alt="#">
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/blog1.jpg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">22 Aug, 2020</div>
+									<h2><a href="blog-single.html">We have annnocuced our new product.</a></h2>
+									<p class="text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/blog2.jpg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">15 Jul, 2020</div>
+									<h2><a href="blog-single.html">Top five way for solving teeth problems.</a></h2>
+									<p class="text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/blog3.jpg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">05 Jan, 2020</div>
+									<h2><a href="blog-single.html">We provide highly business soliutions.</a></h2>
+									<p class="text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Blog Area -->
+		
+		<!-- Start clients -->
+		<div class="clients overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="owl-carousel clients-slider">
+							<div class="single-clients">
+								<img src="img/client1.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="img/client2.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="img/client3.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="img/client4.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="img/client5.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="img/client1.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="img/client2.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="img/client3.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="img/client4.png" alt="#">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/Ens clients -->
+		
+		<!-- Start Appointment -->
+		<section class="appointment">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Send an email to the Patients</h2>
+							<img src="img/section-img.png" alt="#">
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-12">
+						<form class="form" action="#">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="name" type="text" placeholder="Name">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="email" type="email" placeholder="Email">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="phone" type="text" placeholder="Phone">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<div class="nice-select form-control wide" tabindex="0"><span class="current">Department</span>
+											<ul class="list">
+												<li data-value="1" class="option selected ">Department</li>
+												<li data-value="2" class="option">Cardiac Clinic</li>
+												<li data-value="3" class="option">Neurology</li>
+												<li data-value="4" class="option">Dentistry</li>
+												<li data-value="5" class="option">Gastroenterology</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<div class="nice-select form-control wide" tabindex="0"><span class="current">Doctor</span>
+											<ul class="list">
+												<li data-value="1" class="option selected ">Doctor</li>
+												<li data-value="2" class="option">Dr. Akther Hossain</li>
+												<li data-value="3" class="option">Dr. Dery Alex</li>
+												<li data-value="4" class="option">Dr. Jovis Karon</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input type="text" placeholder="Date" id="datepicker">
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12 col-12">
+									<div class="form-group">
+										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-md-4 col-12">
+									<div class="form-group">
+										<div class="button">
+											<button type="submit" class="btn">Send the mail</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-7 col-md-8 col-12">
+									<p>( We will be confirm by an Text Message )</p>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-6 col-md-12 ">
+						<div class="appointment-image">
+							<img src="img/contact-img.png" alt="#">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Appointment -->
+		
+		
+		
+		<!-- Footer Area -->
+		<footer id="footer" class="footer ">
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>About Us</h2>
+								<p></p>
+								<!-- Social -->
+								<ul class="social">
+									<li><a href="#"><i class="icofont-facebook"></i></a></li>
+									<li><a href="#"><i class="icofont-google-plus"></i></a></li>
+									<li><a href="#"><i class="icofont-twitter"></i></a></li>
+									<li><a href="#"><i class="icofont-vimeo"></i></a></li>
+									<li><a href="#"><i class="icofont-pinterest"></i></a></li>
+								</ul>
+								<!-- End Social -->
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer f-link">
+								<h2>Quick Links</h2>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a></li>	
+										</ul>
+									</div>
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>	
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Open Hours</h2>
+								<p></p>
+								<ul class="time-sidual">
+									
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Newsletter</h2>
+								<p></p>
+								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Your email address'" required="" type="email">
+									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Footer Top -->
+			<!-- Copyright -->
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-12">
+							<div class="copyright-content">
+								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Copyright -->
+		</footer>
+		<!--/ End Footer Area -->
+		
+		<!-- jquery Min JS -->
+        <script src="js/jquery.min.js"></script>
+		<!-- jquery Migrate JS -->
+		<script src="js/jquery-migrate-3.0.0.js"></script>
+		<!-- jquery Ui JS -->
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- Easing JS -->
+        <script src="js/easing.js"></script>
+		<!-- Color JS -->
+		<script src="js/colors.js"></script>
+		<!-- Popper JS -->
+		<script src="js/popper.min.js"></script>
+		<!-- Bootstrap Datepicker JS -->
+		<script src="js/bootstrap-datepicker.js"></script>
+		<!-- Jquery Nav JS -->
+        <script src="js/jquery.nav.js"></script>
+		<!-- Slicknav JS -->
+		<script src="js/slicknav.min.js"></script>
+		<!-- ScrollUp JS -->
+        <script src="js/jquery.scrollUp.min.js"></script>
+		<!-- Niceselect JS -->
+		<script src="js/niceselect.js"></script>
+		<!-- Tilt Jquery JS -->
+		<script src="js/tilt.jquery.min.js"></script>
+		<!-- Owl Carousel JS -->
+        <script src="js/owl-carousel.js"></script>
+		<!-- counterup JS -->
+		<script src="js/jquery.counterup.min.js"></script>
+		<!-- Steller JS -->
+		<script src="js/steller.js"></script>
+		<!-- Wow JS -->
+		<script src="js/wow.min.js"></script>
+		<!-- Magnific Popup JS -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- Counter Up CDN JS -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Main JS -->
+		<script src="js/main.js"></script>
+    </body>
 </html>
