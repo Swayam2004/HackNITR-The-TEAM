@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Online Heart Test</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header class="d-flex flex-wrap justify-content-center py-3">
-        <img class="bi me-2" width="50" height="40" src="assets/logos/heart_logo.png" alt="heart">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-          <span class="fs-4">Website Name</span>
-        </a>
 
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">Home</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-          <li class="nav-item">
-            <a href="sign-in.html" class="nav-link">Sign In</a>
-          </li>
-        </ul>
-      </header>
-    </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Online Heart Test</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <div id="hero-container">
-      <h2><strong>Website Name</strong></h2>
-      <div></div>
-      <p><big>Empower yourself with knowledge</big></p>
-      <p>
-        <big
-          >Discover your personalized risk of heart disease with our advanced
-          calculation tool.</big
-        >
-      </p>
-      <!-- <button class="btn btn-warning rounded-pill px-5 py-2 my-4"><b>Start Tutorial</b></button> -->
-      <h4 id="prediction-text" class="my-3">Enter your parameters</h4>
-      <!-- <form id="prediction-form" class="form">
+<body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3">
+      <img class="bi me-2" width="50" height="40" src="assets/logos/heart_logo.png" alt="heart">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <span class="fs-4">Website Name</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a href="#" class="nav-link active" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+        <li class="nav-item">
+          <a href="sign-in.html" class="nav-link">Sign In</a>
+        </li>
+      </ul>
+    </header>
+  </div>
+
+  <div id="hero-container">
+    <h2><strong>Website Name</strong></h2>
+    <div></div>
+    <p><big>Empower yourself with knowledge</big></p>
+    <p>
+      <big>Discover your personalized risk of heart disease with our advanced
+        calculation tool.</big>
+    </p>
+    <!-- <button class="btn btn-warning rounded-pill px-5 py-2 my-4"><b>Start Tutorial</b></button> -->
+    <h4 id="prediction-text" class="my-3">Enter your parameters</h4>
+    <!-- <form id="prediction-form" class="form">
         <div class="prediction">
           <p>a</p>
           <input
@@ -128,64 +124,64 @@
           />
         </div>
       </form> -->
-      <form action='/predict' method="post" class="col s12">
-        <div class="row">
-          <div class="input-field col s4">
-              <label for="a1"><b>Age</b></label>
-              <br>
-            <input name="Age" id="a1" type="number" class="validate">
-          </div>
-          <div class="input-field col s4">
-  
-            <label for="a2"><b>Sex</b></label>
-              <br>
-            <select id="a2" name="Sex" placeholder="Male or Female"  type="numbers" class="validate" style="width: 170px">
-              <option value=""></option>
-              <option value="0">Female</option>
-              <option value="1">Male</option>
-            </select>
+    <form action='http://localhost:5000/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+          <label for="a1"><b>Age</b></label>
+          <br>
+          <input name="Age" id="a1" type="number" class="validate">
+        </div>
+        <div class="input-field col s4">
 
-  
-          </div>
-  
-          <div class="input-field col s4">
-              <label for="a3"><b>Chest Pain type</b></label>
-              <br>
-            <select id="a3" name="Chest Pain type" type="number" class="validate" style="width: 170px">
-              <option value=""></option>
-              <option value="0">Asymptomatic              </option>
-              <option value="1">Atypical Angina           </option>
-              <option value="2">Non-anginal pain          </option>
-              <option value="3">Typical angina            </option>
-            </select>
-            
-          </div>
+          <label for="a2"><b>Sex</b></label>
+          <br>
+          <select id="a2" name="Sex" placeholder="Male or Female" type="numbers" class="validate" style="width: 170px">
+            <option value=""></option>
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+          </select>
 
-          <div class="input-field col s4">
-            <label for="a4"><b>Resting BP(mm Hg)</b></label>
-            <br>
+
+        </div>
+
+        <div class="input-field col s4">
+          <label for="a3"><b>Chest Pain type</b></label>
+          <br>
+          <select id="a3" name="Chest Pain type" type="number" class="validate" style="width: 170px">
+            <option value=""></option>
+            <option value="0">Asymptomatic </option>
+            <option value="1">Atypical Angina </option>
+            <option value="2">Non-anginal pain </option>
+            <option value="3">Typical angina </option>
+          </select>
+
+        </div>
+
+        <div class="input-field col s4">
+          <label for="a4"><b>Resting BP(mm Hg)</b></label>
+          <br>
           <input id="a4" name="Humidity" type="number" class="validate">
 
         </div>
         <div class="input-field col s4">
           <label for="a5"><b>Cholesterol(mg/dl)</b></label>
           <br>
-        <input id="a5" name="Cholesterol" type="number" class="validate">
+          <input id="a5" name="Cholesterol" type="number" class="validate">
+    
+  </div>
+  <div class="input-field col s4">
+    <label for="a6"><b>Fasting blood sugar</b></label>
+    <br>
+    <select id="a6" name="Fasting blood sugar" type="text" class="validate" style="width: 170px">
+      <option value=""></option>
+      <option value="0">Less than 120mg/dl</option>
+      <option value="1">More than 120mg/dl</option>
+    </select>
 
-      </div>
-      <div class="input-field col s4">
-        <label for="a6"><b>Fasting blood sugar</b></label>
-        <br>
-      <select id="a6" name="Fasting blood sugar" type="text" class="validate" style="width: 170px">
-        <option value=""></option>
-        <option value="0">Less than 120mg/dl</option>
-        <option value="1">More than 120mg/dl</option>
-      </select>  
-
-    </div>
-    <div class="input-field col s4">
-      <label for="a7"><b>Resting ECG results</b></label>
-      <br>
+  </div>
+  <div class="input-field col s4">
+    <label for="a7"><b>Resting ECG results</b></label>
+    <br>
     <select id="a7" name="Resting ECG results" type="number" class="validate" style="width: 170px">
       <option value=""></option>
       <option value="0">Left ventricular hpertrophy by Estes's criteria</option>
@@ -197,148 +193,132 @@
   <div class="input-field col s4">
     <label for="a8"><b>Max heart rate(BPM)</b></label>
     <br>
-  <input id="a8" name="Maximum heart rate" type="number" class="validate">
+    <input id="a8" name="Maximum heart rate" type="number" class="validate">
 
-</div>
-<div class="input-field col s4">
-  <label for="a9"><b>Exercise angina</b></label>
+  </div>
+  <div class="input-field col s4">
+    <label for="a9"><b>Exercise angina</b></label>
+    <br>
+    <select id="a9" name="Exercise angina" type="text" class="validate" style="width: 170px">
+      <option value=""></option>
+      <option value="0">NO</option>
+      <option value="1">YES</option>
+    </select>
+
+  </div>
+  <div class="input-field col s4">
+    <label for="a10"><b>Oldpeak</b></label>
+    <br>
+    <input id="a10" name="Oldpeak" type="text" class="validate">
+
+  </div>
+  <div class="input-field col s4">
+    <label for="a11"><b>Slope of ST segment</b></label>
+    <br>
+    <select id="a11" name="Slope of ST segment" type="text" class="validate" style="width: 170px">
+      <option value=""></option>
+      <option value="0">Downsloping</option>
+      <option value="1">Flat</option>
+      <option value="2">Upsloping</option>
+    </select>
+
+  </div>
+  <div class="input-field col s4">
+    <label for="a12"><b>No. of major vessels</b></label>
+    <br>
+    <select id="a12" name="No. of major vessels" type="text" class="validate" style="width: 170px">
+      <option value=""></option>
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+
+  </div>
+  <div class="input-field col s4">
+    <label for="a13"><b>Thalassemia disorder</b></label>
+    <br>
+    <select id="a13" name="Thalassemia disorder" type="text" class="validate" style="width: 170px">
+      <option value=""></option>
+      <option value="0">NULL</option>
+      <option value="1">Fixed defect</option>
+      <option value="2">Normal blood flow</option>
+      <option value="3">Reversible defect</option>
+    </select>
+
+  </div>
+
+  </div>
+  <button style="align-self: center;" class="btn btn-warning px-4 py-2 my-4 rounded-pill" type="submit"><big>Predict
+      Probability</big></button>
+  <p style="align-self: center;"><b>The probability of getting a heart disease: 0.52</b></p>
+  </div>
   <br>
-<select id="a9" name="Exercise angina" type="text" class="validate" style="width: 170px">
-  <option value=""></option>
-  <option value="0">NO</option>
-  <option value="1">YES</option>
-</select>
+  {{pred}}<br>
 
-</div>
-<div class="input-field col s4">
-  <label for="a10"><b>Oldpeak</b></label>
-  <br>
-<input id="a10" name="Oldpeak" type="text" class="validate" >
+  <div class="content" id="info-1">
+    <h2 id="info-1-header">Vision plays a central role in how we acquire knowledge about the world.</h2>
+    <p id="info-1-content">Vision is the primary sense through which humans perceive and interact with their
+      environment.</p>
+    <div class="content-image" id="info-1-img-1"></div>
+    <div class="content-image" id="info-1-img-2"></div>
+    <div class="content-image" id="info-1-img-3"></div>
+    <div class="content-image" id="info-1-img-4"></div>
+    <div class="content-image" id="info-1-img-5"></div>
+  </div>
 
-</div>
-<div class="input-field col s4">
-  <label for="a11"><b>Slope of ST segment</b></label>
-  <br>
-<select id="a11" name="Slope of ST segment" type="text" class="validate" style="width: 170px">
-  <option value=""></option>
-  <option value="0">Downsloping</option>
-  <option value="1">Flat</option>
-  <option value="2">Upsloping</option>
-</select>
-
-</div>
-<div class="input-field col s4">
-  <label for="a12"><b>No. of major vessels</b></label>
-  <br>
-<select id="a12" name="No. of major vessels" type="text" class="validate" style="width: 170px">
-  <option value=""></option>
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-</select>
-
-</div>
-<div class="input-field col s4">
-  <label for="a13"><b>Thalassemia disorder</b></label>
-  <br>
-<select id="a13" name="Thalassemia disorder" type="text" class="validate" style="width: 170px">
-  <option value=""></option>
-  <option value="0">NULL</option>
-  <option value="1">Fixed defect</option>
-  <option value="2">Normal blood flow</option>
-  <option value="3">Reversible defect</option>
-</select>
-
-</div> 
-  
-        </div>  
-      <button style="align-self: center;" class="btn btn-warning px-4 py-2 my-4 rounded-pill"><big>Predict Probability</big></button>
-      <p style="align-self: center;"><b>The probability of getting a heart disease: 0.52</b></p>
-    </div>
-
-    <div class="content" id="info-1">
-        <h2 id="info-1-header">Vision plays a central role in how we acquire knowledge about the world.</h2>
-        <p id="info-1-content">Vision is the primary sense through which humans perceive and interact with their environment.</p>
-        <div class="content-image" id="info-1-img-1"></div>
-        <div class="content-image" id="info-1-img-2"></div>
-        <div class="content-image" id="info-1-img-3"></div>
-        <div class="content-image" id="info-1-img-4"></div>
-        <div class="content-image" id="info-1-img-5"></div>
-    </div>
-    <div class="content" id="info-1">
-      <h2 id="info-1-header">
-        Heart disease is a leading cause of mortality worldwide, but many of its
-        risk factors are modifiable through lifestyle changes and early
-        intervention
-      </h2>
-      <p id="info-1-content">
-        By understanding your individual risk factors, you can make informed
-        decisions about your health
-      </p>
-      <div class="content-image" id="info-1-img-1"></div>
-      <div class="content-image" id="info-1-img-2"></div>
-      <div class="content-image" id="info-1-img-3"></div>
-      <div class="content-image" id="info-1-img-4"></div>
-      <div class="content-image" id="info-1-img-5"></div>
-    </div>
-
-    <div class="container">
-      <div id="callout-info">
-        <h1>Empower Your Heart</h1>
-        <p>
-          Your health is your most valuable asset, the cornerstone of a
-          fulfilling life. It's the sum of your choices, the foundation upon
-          which your dreams are built. By prioritizing your well-being today,
-          you're not just investing in a longer life - you're ensuring a life
-          lived to its fullest potential, rich with vitality and purpose
-        </p>
-      </div>
-    </div>
-
-    <div class="content" id="info-2">
-      <h2 id="info-2-header">Take Action</h2>
-      <p id="info-2-content-1">
-        Armed with knowledge about your heart health, it's time to take
-        proactive steps towards a healthier lifestyle. Explore actionable tips
-        and strategies for improving your cardiovascular health, from adopting a
-        heart-healthy diet and incorporating regular exercise into your routine
-        to managing stress and quitting smoking. Small changes can make a big
-        difference when it comes to your heart. Armed with knowledge about your
-        heart health, it's time to take proactive steps towards a healthier
-        lifestyle. Explore actionable tips and strategies for improving your
-        cardiovascular health, from adopting a heart-healthy diet and
-        incorporating regular exercise into your routine to managing stress and
-        quitting smoking. Small changes can make a big difference when it comes
-        to your heart
-      </p>
-      <div class="content-image" id="info-2-img-1"></div>
-      <div class="content-image" id="info-2-img-2"></div>
-      <p class="text-body-secondary" id="info-2-content-2">
-        <i
-          ><small
-            >Stay up-to-date with the latest news and developments in the field
-            of heart health. Our blog features informative articles, expert
-            interviews, and tips for maintaining a healthy heart. Whether you're
-            looking for healthy recipe ideas, exercise inspiration, or guidance
-            on managing chronic conditions, our resources are here to support
-            you on your journey to optimal heart health</small
-          ></i
-        >
+  <div class="container">
+    <div id="callout-info">
+      <h1>Empower Your Heart</h1>
+      <p>
+        Your health is your most valuable asset, the cornerstone of a
+        fulfilling life. It's the sum of your choices, the foundation upon
+        which your dreams are built. By prioritizing your well-being today,
+        you're not just investing in a longer life - you're ensuring a life
+        lived to its fullest potential, rich with vitality and purpose
       </p>
     </div>
+  </div>
 
-    <div id="call-to-action">
-      <div>
-        <h2>Daily Heart Tests</h2>
-        <p class="mx-5">Take charge of your heart health journey today.</p>
-        <!-- <button class="btn btn-warning rounded-pill px-4 my-4">
+  <div class="content" id="info-2">
+    <h2 id="info-2-header">Take Action</h2>
+    <p id="info-2-content-1">
+      Armed with knowledge about your heart health, it's time to take
+      proactive steps towards a healthier lifestyle. Explore actionable tips
+      and strategies for improving your cardiovascular health, from adopting a
+      heart-healthy diet and incorporating regular exercise into your routine
+      to managing stress and quitting smoking. Small changes can make a big
+      difference when it comes to your heart. Armed with knowledge about your
+      heart health, it's time to take proactive steps towards a healthier
+      lifestyle. Explore actionable tips and strategies for improving your
+      cardiovascular health, from adopting a heart-healthy diet and
+      incorporating regular exercise into your routine to managing stress and
+      quitting smoking. Small changes can make a big difference when it comes
+      to your heart
+    </p>
+    <div class="content-image" id="info-2-img-1"></div>
+    <div class="content-image" id="info-2-img-2"></div>
+    <p class="text-body-secondary" id="info-2-content-2">
+      <i><small>Stay up-to-date with the latest news and developments in the field
+          of heart health. Our blog features informative articles, expert
+          interviews, and tips for maintaining a healthy heart. Whether you're
+          looking for healthy recipe ideas, exercise inspiration, or guidance
+          on managing chronic conditions, our resources are here to support
+          you on your journey to optimal heart health</small></i>
+    </p>
+  </div>
+
+  <div id="call-to-action">
+    <div>
+      <h2>Daily Heart Tests</h2>
+      <p class="mx-5">Take charge of your heart health journey today.</p>
+      <!-- <button class="btn btn-warning rounded-pill px-4 my-4">
           <b>Start Tutorial</b>
         </button> -->
-      </div>
     </div>
+  </div>
 
-    <!-- <div class="container">
+  <!-- <div class="container">
       <footer
         class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"
       >
@@ -463,34 +443,27 @@
       </footer>
     </div>  -->
 
-    <div class="container">
-      <footer
-        class="d-flex justify-content-between align-items-center py-3 my-2"
-      >
-        <p class="col-md-4 mb-0 text-body-secondary">© 2023 HackNITR</p>
+  <div class="container">
+    <footer class="d-flex justify-content-between align-items-center py-3 my-2">
+      <p class="col-md-4 mb-0 text-body-secondary">© 2023 HackNITR</p>
 
-        <ul class="nav col-md-8 justify-content-end" id="footer-links">
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary"
-              >Terms & Conditions</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">Settings</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary"
-              >Privacy Policy</a
-            >
-          </li>
-        </ul>
-      </footer>
-    </div>
+      <ul class="nav col-md-8 justify-content-end" id="footer-links">
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">Terms & Conditions</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">Privacy Policy</a>
+        </li>
+      </ul>
+    </footer>
+  </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
